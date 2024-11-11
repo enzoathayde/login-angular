@@ -1,8 +1,16 @@
-<app-default-login-layout 
-  title="Login into your account" 
-  primaryBtnText="Login Now"
-  secondaryBtnText="Sign Up Now"
->
-<form [formGroup]="loginForm">
-</form>
+<app-default-login-layout title="Login into your account" primaryBtnText="Login Now" secondaryBtnText="Sign Up Now">
+  <form [formGroup]="loginForm">
+    <app-primary-input formName="email" type="email" label="Email:" placeholder="johndoe@gmail.com">
+
+      <img src="assets/mail.svg" alt="">
+    </app-primary-input>
+
+    <app-primary-input formName="password" type="password" label="Password: ">
+
+      <img src="assets/lock.svg" alt="">
+    </app-primary-input>
+
+      
+
+  </form>
 </app-default-login-layout>
