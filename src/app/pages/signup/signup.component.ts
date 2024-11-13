@@ -58,9 +58,9 @@ export class SignupComponent {
   } 
 
   submit() {
-    this.loginService.login(this.signUpForm.value.email, this.signUpForm.value.password).subscribe({
-      next: () => this.toastr.success("Login efetuado com sucesso"),
-      error: () => this.toastr.error("Erro inesperado, tente novamente mais tarde")
+    this.loginService.signup(this.signUpForm.value.email, this.signUpForm.value.email, this.signUpForm.value.password,  this.signUpForm.value.passwordConfirm).subscribe({
+      next: () => this.toastr.success("Cadastro efetuado efetuado com sucesso"),
+      error: () => this.toastr.error("Cadastro não foi efetuado corretamente")
     })
   }
 
